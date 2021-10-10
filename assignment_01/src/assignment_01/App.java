@@ -14,10 +14,19 @@ public class App {
 	middleThree("peter") <b>---></b> "ete" <br>
 	middleThree("Jamaica") <b>---></b>"mai" <br>
 	 */
-	
+
 	public static String middleThree(String str) {
-		String result = str;
+		String result = "";
+		if(str.length() <= 3){
+			return str;
+		}else{
+			int l = str.length();
+			int bolum = l/2;
+			result = str.substring(bolum-1, bolum+2);
+		}
 		return result;
+
+
 	}
 	
 	
