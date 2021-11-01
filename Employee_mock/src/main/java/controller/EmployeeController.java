@@ -6,6 +6,7 @@ import service.EmployeeService;
 /**
  * Created by TCHYARICI on 02/23/2020
  */
+@SuppressWarnings("ALL")
 public class EmployeeController
 {
 	private EmployeeService employeeService;
@@ -14,13 +15,13 @@ public class EmployeeController
 		this.employeeService = employeeService;
 	}
 
-	public String getProjectedEmployee()
+	public String getProjectedEmployee(Employee employee)
 	{
-		final Employee actualEmployee = employeeService.getEmployee();
-		return actualEmployee.getfName();
+		final Employee actualEmployee = employeeService.getEmployee(employee);
+		return actualEmployee.getFName();
 	}
 
-	public void saveEmployee(Employee employee) {
-		employeeService.saveEmployee(employee);
+	public boolean saveEmployee(Employee employee) {
+		return  employeeService.saveEmployee(employee);
 	}
 }

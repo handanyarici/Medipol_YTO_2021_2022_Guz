@@ -6,11 +6,11 @@ package model;
 public class Employee {
 	private String fName;
 
-	public String getfName() {
+	public String getFName() {
 		return fName;
 	}
 
-	public void setfName(String fName) {
+	public void setFName(String fName) {
 		this.fName = fName;
 	}
 }
